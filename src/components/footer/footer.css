@@ -1,0 +1,13 @@
+.rootfooter {
+    border-top-style: groove;
+ }
+
+.footer {
+    text-align: center;
+    background-color: #fff;
+}
+
+.footerFontSize: {
+    padding: 5px;
+    font-size: 16px;
+}
