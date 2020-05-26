@@ -23,13 +23,6 @@
   background-color: #efeded;
 }
 
-.gradient {
-  background: linear-gradient(36deg, white 55%, rgb(64, 81, 171) 18%);
-  color: black; 
-  padding: 8px;
-  font-weight: bold;
-}
-
 .x_panel {
     padding: 15px;
 }

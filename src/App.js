@@ -1,19 +1,20 @@
 import React from 'react';
 import './App.css';
-import NavBar from './components/navbar/navbar';
+import AppNavBar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
-import Header from './components/top-header/top-header';
-import CveDashboard from './components/cve-dashboard/cve-dashboard-index';
+import Routers from './components/routers';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-        <div className="mainContainer">
-          <Header/>
-          <CveDashboard/>
-        </div>
-      <Footer/>
+      <BrowserRouter>
+        <AppNavBar/>
+          <div className="mainContainer">
+            <Routers/>
+          </div>
+        <Footer/>
+     </BrowserRouter>
     </div>
   );
 }

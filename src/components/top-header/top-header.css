@@ -2,3 +2,10 @@
   flex-grow: 1;
   margin-bottom:15px;
 }
+
+.gradient {
+  background: linear-gradient(36deg, white 55%, #3f51b5 18%);
+  color: black; 
+  padding: 8px;
+  font-weight: bold;
+}
