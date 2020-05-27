@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "fusioncharts": "^3.15.1-sr.1",
     "material-table": "^1.57.2",
     "mdbreact": "^4.26.1",
     "mui-datatables": "^2.14.0",
@@ -15,6 +16,7 @@
     "react-bootstrap": "^1.0.1",
     "react-content-loader": "^5.0.4",
     "react-dom": "^16.13.1",
+    "react-fusioncharts": "^3.1.2",
     "react-mdl": "^2.1.0",
     "react-scripts": "3.4.1",
     "react-select": "^3.1.0"
