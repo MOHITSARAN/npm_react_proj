@@ -7,7 +7,7 @@ import ReactFC from 'react-fusioncharts';
 
 ReactFC.fcRoot(FusionCharts, TimeSeries);
 
-class TimeSeriesChart extends React.Component {
+class TimeSeriesIndia extends React.Component {
   _isMounted = false;
 
 	constructor(props) {
@@ -25,7 +25,7 @@ class TimeSeriesChart extends React.Component {
                 caption: "Total Covid-19 Cases",
             },
             caption: {
-              text: this.props.url +" Covid-19 Cases Time Series"
+              text: this.props.name +" Covid-19 Cases Time Series"
             },
             subcaption: {
               text: "Confirmed, Recovered & Deaths"
@@ -53,7 +53,7 @@ class TimeSeriesChart extends React.Component {
     this._isMounted = true;
 
     getData("https://pomber.github.io/covid19/timeseries.json").then((resultData) => {
-      
+    
       if (this._isMounted) {
 
   	    const data_schema = [{
@@ -64,13 +64,13 @@ class TimeSeriesChart extends React.Component {
           "name": "Type",
           "type": "string"
         }, {
-          "name": "Number of cases in Canada",
+          "name": "Number of cases in "+this.props.name,
           "type": "number"
         }]
 
         var country_data = [];
-        resultData["US"].forEach(({ date, confirmed, recovered, deaths }) => {
-   	    	const date_from  = (date.split("-")[1]+"/"+date.split("-")[2]+"/"+date.split("-")[0]).toString()
+        resultData["India"].forEach(({ date, confirmed, recovered, deaths }) => {
+   	    	  const date_from  = (date.split("-")[1]+"/"+date.split("-")[2]+"/"+date.split("-")[0]).toString()
             const dates = new Date(date_from);
                    
             const formattedDate = dates.toLocaleDateString('en-GB', {
@@ -132,4 +132,4 @@ class TimeSeriesChart extends React.Component {
    }
   }
 
-export default TimeSeriesChart;
+export default TimeSeriesIndia;

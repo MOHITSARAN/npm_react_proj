@@ -21,13 +21,13 @@ class PieChart extends React.Component {
  componentDidMount() {
     this._isMounted = true;
 
-    getData("https://coronavirus-19-api.herokuapp.com/countries/"+this.props.url).then((resultData) => {
+    getData("https://coronavirus-19-api.herokuapp.com/countries/"+this.props.name).then((resultData) => {
       
       if (this._isMounted) {
 
       	const myDataSource = {
       	 	"chart": {
-	            caption: "Total Covid-19 Cases In "+this.props.url,
+	            caption: "Total Covid-19 Cases In "+this.props.name,
 	            subcaption: "",
 	            "showPercentInTooltip": "0",
 	            "showPercentValues": "0",
@@ -36,7 +36,7 @@ class PieChart extends React.Component {
 	            showValues:'1',
 	            aligncaptionwithcanvas: "0",
 	            captionpadding: "0",
-	            pieRadius: "55",
+	            pieRadius: "60",
 	            centerlabel: "# Cases: $value",
 	            legendIconSides: "0",
 	            theme: "fusion",
