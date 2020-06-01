@@ -12,12 +12,11 @@
 	height: 50px;
 }
 
-.links a{
-	color: white !important;
-}
-
 .fas {
   padding-right: 5px;
   color: mediumaquamarine;
 }
 
+.links a {
+	color: white !important;
+}

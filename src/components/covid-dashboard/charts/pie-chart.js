@@ -15,7 +15,12 @@ class PieChart extends React.Component {
     this.state = {
       error: null,
       response: '',
-      chartConfigs:''
+      chartConfigs : {
+	  	type: 'doughnut2d',
+	  	width: '100%',
+	  	height: '320',
+	  	dataSource: '',
+		}
     };
   }
  componentDidMount() {
@@ -98,7 +103,7 @@ class PieChart extends React.Component {
       const { error, chartConfigs } = this.state;
 
       if (error) {
-        return <div>Error: {error.message}</div>;
+        return <div>Error: {error.message}</div>
       } else {
         return (
 			<ReactFC {...chartConfigs} />

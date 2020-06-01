@@ -1,0 +1,23 @@
+.main-section {
+  display: flex;
+  height:800px;
+}
+
+.sidebar {
+  width: 270px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.body-container{
+    flex: 1 1;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: auto;
+    background-color: #f7f7f7 !important;
+}
+
+.MuiListItem-gutters {
+	padding:15px !important;
+}

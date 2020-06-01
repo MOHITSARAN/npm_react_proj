@@ -11,16 +11,16 @@ export default function NavBar() {
     <div className="rootnav">
       <Navbar sticky="top" className="navstyle navbar-expand" variant="dark">
          <Navbar.Brand>
-          <IconButton edge="start" className="menuButton" color="inherit" aria-label="menu">
+          <IconButton className="menuButton" color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
          </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
             <div className="links">
-               <Link to="/covid_info" style={{'paddingRight':'25px'}}><Button color="inherit"><i className="fas fa-virus" style={{'fontSize':'16px'}}></i> Covid-19</Button></Link>
-               <Link to="/" style={{'paddingRight':'15px'}}><Button color="inherit"><i className="fas fa-search"></i> CVE Search</Button></Link>
-               <Link to="/owaps_top" style={{'paddingRight':'16px'}}><Button color="inherit"><i className="fas fa-user-shield"></i>OWAPS Top 10</Button></Link>
+               <Button color="inherit"><Link to="/covid_info" style={{'paddingRight':'25px'}}><i className="fas fa-virus" style={{'fontSize':'16px'}}></i> Covid-19</Link></Button>
+               <Button color="inherit"><Link to="/" style={{'paddingRight':'15px'}}><i className="fas fa-search"></i> CVE Search</Link></Button>
+               <Button color="inherit"><Link to="/owaps_top" style={{'paddingRight':'16px'}}><i className="fas fa-user-shield"></i>OWAPS Top 10</Link></Button>
             </div>
           </Navbar.Text>
         </Navbar.Collapse>

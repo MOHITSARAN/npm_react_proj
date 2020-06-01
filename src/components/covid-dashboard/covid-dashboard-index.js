@@ -28,6 +28,7 @@ class CovidDashboard extends React.Component {
   }
  componentDidMount() {
     this._isMounted = true;
+    
     getData("https://coronavirus-19-api.herokuapp.com/countries").then((result) => {
 
       let rows = [];

@@ -1,8 +1,9 @@
 import React from "react";
 import { Row, Col } from 'react-bootstrap';
-import TableLoader from './content-loader';
 import Paper from '@material-ui/core/Paper';
 import Header from '../top-header/top-header';
+import Sidebar from './sidebar';
+import './owaps-top-index.css';
 
 class OwapsTop extends React.Component {
   _isMounted = false;
@@ -13,8 +14,16 @@ class OwapsTop extends React.Component {
       error: null,
       isLoaded: true,
       title: 'Owaps Top-10 Dashboard',
+      details:''
     };
   }
+  
+  getDetails = (val) => {
+    this.setState({
+      details: val
+    })
+  }
+
  componentDidMount() {
     this._isMounted = true;
   }
@@ -24,7 +33,7 @@ class OwapsTop extends React.Component {
   }
 
   render() {
-      const { error, isLoaded } = this.state;
+      const { error, isLoaded, details } = this.state;
 
       if (error) {
         return <div>Error: {error.message}</div>;
@@ -34,7 +43,6 @@ class OwapsTop extends React.Component {
             <Col md={12}>
               <Header title= {this.state.title}/>
               <Paper className="x_panel">
-                 <TableLoader/> 
               </Paper>
             </Col>
           </Row>
@@ -44,7 +52,14 @@ class OwapsTop extends React.Component {
         <Row>
           <Col md={12}>
             <Header title= {this.state.title}/>
-           	
+               <div className="main-section">
+                <div className="sidebar">
+           	      <Sidebar getDetails= {this.getDetails}/>
+                 </div>
+                 <div className="body-container">
+                  <h1>{details}</h1>
+                 </div>
+               </div>
           </Col>
         </Row>
     );
