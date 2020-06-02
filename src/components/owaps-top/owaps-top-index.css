@@ -1,6 +1,7 @@
 .main-section {
   display: flex;
   height:800px;
+  border: #efeded29 groove;
 }
 
 .sidebar {
@@ -15,7 +16,7 @@
     padding-left: 1em;
     padding-right: 1em;
     overflow: auto;
-    background-color: #f7f7f7 !important;
+    background-color: white !important;
 }
 
 .MuiListItem-gutters {

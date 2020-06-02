@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Header from '../top-header/top-header';
 import Sidebar from './sidebar';
 import './owaps-top-index.css';
+import DetailView from './detail-view';
 
 class OwapsTop extends React.Component {
   _isMounted = false;
@@ -14,14 +15,21 @@ class OwapsTop extends React.Component {
       error: null,
       isLoaded: true,
       title: 'Owaps Top-10 Dashboard',
-      details:''
+      detailsShow:false,
+      summaryValue:'',
     };
   }
   
   getDetails = (val) => {
-    this.setState({
-      details: val
+    fetch(`${process.env.PUBLIC_URL}/owaps.json`)
+    .then(res => res.json())
+    .then(data => {
+      this.setState({
+        detailsShow: true,
+        summaryValue: data
+      })
     })
+    .catch(err => console.error(err));
   }
 
  componentDidMount() {
@@ -33,7 +41,7 @@ class OwapsTop extends React.Component {
   }
 
   render() {
-      const { error, isLoaded, details } = this.state;
+      const { error, isLoaded, summaryValue, detailsShow } = this.state;
 
       if (error) {
         return <div>Error: {error.message}</div>;
@@ -57,7 +65,7 @@ class OwapsTop extends React.Component {
            	      <Sidebar getDetails= {this.getDetails}/>
                  </div>
                  <div className="body-container">
-                  <h1>{details}</h1>
+                   <DetailView details={detailsShow} summary= {summaryValue}/>
                  </div>
                </div>
           </Col>
