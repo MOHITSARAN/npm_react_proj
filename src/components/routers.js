@@ -6,8 +6,8 @@ import OwapsTop from './owaps-top/owaps-top-index';
 
 const Routers = () => (
 	<Switch>
-	  <Route exact path="/" component={CveDashboard} />
-	  <Route path="/covid_info" component={CovidDashboard} />
+	  <Route exact path="/" component={CovidDashboard} />
+	  <Route path="/cve_dashboard" component={CveDashboard} />
 	  <Route path="/owaps_top" component={OwapsTop} />
 	</Switch>
 )

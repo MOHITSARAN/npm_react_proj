@@ -18,8 +18,8 @@ export default function NavBar() {
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
             <div className="links">
-               <Button color="inherit"><Link to="/covid_info" style={{'paddingRight':'25px'}}><i className="fas fa-virus" style={{'fontSize':'16px'}}></i> Covid-19</Link></Button>
-               <Button color="inherit"><Link to="/" style={{'paddingRight':'15px'}}><i className="fas fa-search"></i> CVE Search</Link></Button>
+               <Button color="inherit"><Link to="/" style={{'paddingRight':'25px'}}><i className="fas fa-virus" style={{'fontSize':'16px'}}></i> Covid-19</Link></Button>
+               <Button color="inherit"><Link to="/cve_dashboard" style={{'paddingRight':'15px'}}><i className="fas fa-search"></i> CVE Search</Link></Button>
                <Button color="inherit"><Link to="/owaps_top" style={{'paddingRight':'16px'}}><i className="fas fa-user-shield"></i>OWAPS Top 10</Link></Button>
             </div>
           </Navbar.Text>
