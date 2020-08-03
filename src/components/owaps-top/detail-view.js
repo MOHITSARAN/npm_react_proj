@@ -15,7 +15,7 @@ const GetReferencesURL = props => {
   let url_str = []
   if (props.item){
     url_str = (
-      <ul style={{"word-break":"break-word"}}>{props.item.map((item, i) => <li key={i}><a key={i} href={item} target='_blank' rel="noopener noreferrer" style={{"color":"blue"}}>{item}</a></li>)}</ul> 
+      <ul style={{"wordBreak":"break-word"}}>{props.item.map((item, i) => <li key={i}><a key={i} href={item} target='_blank' rel="noopener noreferrer" style={{"color":"blue"}}>{item}</a></li>)}</ul> 
     )
     return url_str
   }

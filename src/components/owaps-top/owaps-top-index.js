@@ -21,13 +21,19 @@ class OwapsTop extends React.Component {
   }
   
   getDetails = (val) => {
+    var selectedValue = "";
     fetch(`${process.env.PUBLIC_URL}/owaps.json`)
     .then(res => res.json())
     .then(data => {
-      this.setState({
-        detailsShow: true,
-        summaryValue: data
-      })
+      data.forEach(function(item, key) {
+        if (item['risks'] === val){ 
+          selectedValue = item;
+        }
+     })
+     this.setState({
+      detailsShow: true,
+      summaryValue: selectedValue
+     })
     })
     .catch(err => console.error(err));
   }
